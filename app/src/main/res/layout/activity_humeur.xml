@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayoutHumeur"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF9F4">
+
+    <!-- BARRE DE NAVIGATION INFÉRIEURE -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/fond_carte_blanche"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/tabAccueil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏠"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accueil"
+                android:textColor="#8C7A70"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabJournal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📖"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Journal"
+                android:textColor="#8C7A70"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabHumeur"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😊"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Humeur"
+                android:textColor="#8D5968"
+                android:textSize="10sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tabOptions"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🪄"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Options"
+                android:textColor="#8C7A70"
+                android:textSize="10sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- LE CONTENU DÉFILANT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="MON PETIT ESPACE 🌷"
+                android:textColor="#8D5968"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Comment te sens-tu ? 🌷"
+                android:textColor="#7A4F5D"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="16dp"
+                android:text="Prends un instant pour écouter ton cœur."
+                android:textColor="#8C7A70"
+                android:textSize="14sp" />
+
+            <!-- LES SIX HUMEURS -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Aujourd'hui, je me sens..."
+                android:textColor="#7A4F5D"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:alignmentMode="alignMargins"
+                android:useDefaultMargins="true">
+
+                <TextView
+                    android:id="@+id/humeurHeureuse"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="#F4DFD8"
+                    android:padding="8dp"
+                    android:text="😊\nHeureuse"
+                    android:textColor="#684651"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/humeurTriste"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="#E9E5F3"
+                    android:padding="8dp"
+                    android:text="😔\nTriste"
+                    android:textColor="#684651"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/humeurColere"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="#F8EBCB"
+                    android:padding="8dp"
+                    android:text="😡\nEn colère"
+                    android:textColor="#684651"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/humeurApaisee"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="#DDEBE0"
+                    android:padding="8dp"
+                    android:text="😌\nApaisée"
+                    android:textColor="#684651"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/humeurAimee"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="#F3E2EC"
+                    android:padding="8dp"
+                    android:text="🥰\nAimée"
+                    android:textColor="#684651"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/humeurFatiguee"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="#E8E6DF"
+                    android:padding="8dp"
+                    android:text="😴\nFatiguée"
+                    android:textColor="#684651"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </GridLayout>
+
+            <!-- PHRASE DOUCE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/fond_carte_blanche"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Un petit mot pour toi 💌"
+                    android:textColor="#7A4F5D"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPhraseDouce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Tu as le droit de ressentir ce que tu ressens. ♡"
+                    android:textColor="#8C7A70"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- ESPACE PERSONNEL (NOTE) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:text="Qu'as-tu sur le cœur ?"
+                android:textColor="#7A4F5D"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etNoteHumeur"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/fond_carte_blanche"
+                android:gravity="top|start"
+                android:hint="Écris librement ce que tu ressens..."
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="14dp"
+                android:textColor="#4A3E3D"
+                android:textColorHint="#A5968E"
+                android:textSize="14sp" />
+
+            <!-- BOUTON ENREGISTRER -->
+            <Button
+                android:id="@+id/btnEnregistrerHumeur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#8D5968"
+                android:minHeight="50dp"
+                android:text="Enregistrer mon humeur ♡"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <!-- HISTORIQUE DES HUMEURS (SOUS FORME DE LISTE COMME SUR L'IMAGE) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Mon historique d'humeur 📊"
+                android:textColor="#7A4F5D"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Conteneur dynamique qui affichera la liste des humeurs enregistrées -->
+            <LinearLayout
+                android:id="@+id/containerHistoriqueHumeur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

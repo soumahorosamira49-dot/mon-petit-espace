@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayoutMessage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7EFE8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- EN-TÊTE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:letterSpacing="0.05"
+            android:text="ESPACE RÉCONFORT 💌"
+            android:textColor="#8C7A70"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Messages doux"
+            android:textColor="#4A3E3D"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="40dp"
+            android:text="Un petit mot rien que pour toi, sans attente. ♡"
+            android:textColor="#8C7A70"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+
+        <!-- CARTE CENTRALE DU MESSAGE DOUX -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/fond_carte_blanche"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <!-- BOUTON CŒUR POUR LES FAVORIS (EN HAUT À DROITE DE LA CARTE OU CENTRÉ) -->
+            <TextView
+                android:id="@+id/btnFavori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="🤍"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tvMessageDouceur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="8dp"
+                android:text="« Prends le temps de souffler. Ce qui doit être fait attendra un peu. »"
+                android:textColor="#4A3E3D"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvSignatureDouceur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="— Douceur de l'instant"
+                android:textColor="#8C7A70"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- BOUTON POUR UN AUTRE MESSAGE -->
+        <Button
+            android:id="@+id/btnAutreMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#8C7A70"
+            android:paddingVertical="14dp"
+            android:text="J'ai besoin d'un autre message 🎀"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <!-- BOUTON RETOUR -->
+        <Button
+            android:id="@+id/btnRetourMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#EFE5DC"
+            android:paddingVertical="12dp"
+            android:text="Retour à l'accueil ♡"
+            android:textColor="#4A3E3D"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

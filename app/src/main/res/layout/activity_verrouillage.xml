@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayoutVerrouillage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7EFE8"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Petite icône végétale chaleureuse -->
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:background="#EFE5DC"
+        android:gravity="center"
+        android:text="🌿"
+        android:textSize="28sp" />
+
+    <!-- TITRE DYNAMIQUE -->
+    <TextView
+        android:id="@+id/txtTitreVerrouillage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mon petit espace"
+        android:textColor="#4A3E3D"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- SOUS-TITRE DYNAMIQUE (Plus neutre et respectueux de toutes les émotions) -->
+    <TextView
+        android:id="@+id/txtSousTitreVerrouillage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="Un espace rien qu'à toi, en toute sécurité ♡"
+        android:textColor="#8C7A70"
+        android:textSize="13sp"
+        android:textStyle="italic" />
+
+    <!-- Premier champ de saisie -->
+    <EditText
+        android:id="@+id/editCodeSecret"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/fond_carte_blanche"
+        android:hint="✨ Entre ton code secret..."
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:padding="16dp"
+        android:textColor="#4A3E3D"
+        android:textColorHint="#B5A49B"
+        android:textSize="14sp" />
+
+    <!-- Conteneur de confirmation (affiché uniquement en création de code) -->
+    <LinearLayout
+        android:id="@+id/layoutConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editCodeConfirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/fond_carte_blanche"
+            android:hint="🌸 Retape ton code pour confirmer..."
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:padding="16dp"
+            android:textColor="#4A3E3D"
+            android:textColorHint="#B5A49B"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Bouton de validation -->
+    <Button
+        android:id="@+id/btnValiderCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#7A4F5D"
+        android:paddingVertical="14dp"
+        android:text="Ouvrir mon espace ♡"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+</LinearLayout>

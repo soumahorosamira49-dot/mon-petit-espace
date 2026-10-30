@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/fond_carte_blanche">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvDatePensee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#EFE5DC"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:textColor="#8C7A70"
+            android:textSize="11sp"
+            android:textStyle="bold"/>
+
+        <!-- Conteneur pour les icônes favori, modifier et supprimer -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- BOUTON FAVORI ♡ -->
+            <TextView
+                android:id="@+id/btnFavoriPensee"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="🤍"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Mettre en favori"
+                android:padding="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <!-- BOUTON MODIFIER -->
+            <TextView
+                android:id="@+id/btnModifierPensee"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="✏️"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Modifier cette pensée"
+                android:padding="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <!-- BOUTON SUPPRIMER -->
+            <TextView
+                android:id="@+id/btnSupprimerPensee"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="🗑️"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Supprimer cette pensée"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvTextePensee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#4A3E3D"
+        android:lineSpacingExtra="4dp"
+        android:textStyle="italic"/>
+
+</LinearLayout>
+
+
